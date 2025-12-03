@@ -11,6 +11,8 @@ Text openingText = new Text();
 Text badEndText = new Text();
 Text goodEndText = new Text();
 
+boolean gameBegining = true;
+
 boolean goodEnding = false;
 boolean badEnding = false;
 
@@ -25,13 +27,16 @@ void setup() {
 void draw() {
 background(0);
  
+ if (gameBegining) {
  table.displayTable();
  plate.displayPlate();
  uncookedMeat.displayRawMeat();
  hands.displayHands();
  topRightPan.displayTopRightPan();
  openingText.displayOpeningText();
-  
+ }
+ 
+ 
 }
 
 

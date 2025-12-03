@@ -1,7 +1,7 @@
 class Meat {
 
   
-//meat constructor class
+//meat class constructor
 Meat() {
 
 

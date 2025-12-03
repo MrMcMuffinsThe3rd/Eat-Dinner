@@ -3,10 +3,11 @@ class Props {
   PImage hands;
   PImage table;
   PImage stove;
-  PImage pan;
+  PImage topRightPan;
+  PImage cookingPan;
   PImage plate;
   
-  PVector platePosition = new PVector(200, 350);
+  PVector platePosition = new PVector(0, 0);
 
 //props class constructor
 Props() {
@@ -24,13 +25,18 @@ void displayTable() {
 
 void displayHands() {
 
+   hands = loadImage("handsSprite.png");
+   hands.resize(400, 400);
+  image(hands, 0, 0);
   
 }
 
 void displayPlate() {
 
   plate = loadImage("plateSprite.png");
-  image(plate, platePosition.x, platePosition.y);
+  plate.resize(400,400);
+  image(plate,platePosition.x,platePosition.y);
+  
   
 }
 
@@ -41,10 +47,17 @@ void displayStove() {
 }
 
 
-  void displayPan() {
+  void displayTopRightPan() {
   
+  topRightPan = loadImage("topRightPanSprite.png");
+  topRightPan.resize(400, 400);
+  image(topRightPan, 0, 0);
   
+  }
   
+  void displayCookingPan() {
+  
+    
   }
   
 

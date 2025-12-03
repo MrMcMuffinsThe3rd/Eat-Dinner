@@ -3,7 +3,7 @@ class Meat {
   PImage uncookedMeat;
   PImage cookedMeat;
   
- PVector rawMeatPosition = new PVector(200, 350);
+ PVector rawMeatPosition = new PVector(45, 130);
   
   
   
@@ -15,9 +15,8 @@ Meat() {
 
 void displayRawMeat(){
 
-  
-  scale(0.5);
   uncookedMeat = loadImage("rawMeatSprite.png");
+  uncookedMeat.resize(300,300);
   image(uncookedMeat, rawMeatPosition.x,rawMeatPosition.y);
 
 }

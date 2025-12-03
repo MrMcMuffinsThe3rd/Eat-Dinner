@@ -12,6 +12,9 @@ Text badEndText = new Text();
 Text goodEndText = new Text();
 
 boolean gameBegining = true;
+boolean cookingStage = false;
+boolean cookingDone = false;
+boolean eatDinnerStage = false;
 
 boolean goodEnding = false;
 boolean badEnding = false;
@@ -27,6 +30,7 @@ void setup() {
 void draw() {
 background(0);
  
+ //display frame one of the game
  if (gameBegining) {
  table.displayTable();
  plate.displayPlate();
@@ -35,6 +39,20 @@ background(0);
  topRightPan.displayTopRightPan();
  openingText.displayOpeningText();
  }
+ 
+ //display frame two (cooking)
+ 
+ 
+ //display frame three (cooked)
+ 
+ 
+ //display frame four (Eat Dinner)
+ 
+ 
+ //display good ending frame
+ 
+ 
+ //display bad ending frame
  
  
 }
@@ -53,5 +71,6 @@ void displayBadEnding() {
 
 void mousePressed() {
 
+  if (topRightpan )
 
 }

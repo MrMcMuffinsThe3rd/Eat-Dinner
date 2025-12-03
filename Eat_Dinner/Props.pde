@@ -6,6 +6,8 @@ class Props {
   PImage topRightPan;
   PImage cookingPan;
   PImage plate;
+  PImage thumbsUp;
+  PImage bloodyHands;
   
   PVector platePosition = new PVector(0, 0);
 
@@ -58,6 +60,16 @@ void displayStove() {
   void displayCookingPan() {
   
     
+  }
+  
+  void displayThumbsUp() {
+  
+  
+  }
+  
+  void displayBloodyHands() {
+  
+  
   }
   
 

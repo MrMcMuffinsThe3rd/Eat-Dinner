@@ -40,7 +40,7 @@ background(0);
  hands.displayHands();
  topRightPan.displayTopRightPan();
  
- if (textOn == true){
+ if (textOn == true && cookingStage == false){
  openingText.displayOpeningText();
  }
  }
@@ -83,6 +83,7 @@ background(0);
 
 void displayGoodEnding() {
 
+  
 
 }
 
@@ -98,13 +99,26 @@ void mousePressed() {
   textOn = false;
 
   //checks if topRightPan is pressed and text is off
-  //if (mouseX >= ) {
+  if (mouseX >= 290 && mouseY <= 90 && textOn == false) {
   
+    cookingStage = true;
   
-  //}
+  }
   
   //checks if meat on plate is pressed and text is off
+    else if (mouseX >= 130 && mouseY >= 200 && mouseX <= 280 && mouseY <= 300 
+  && textOn == false && cookingDone == true) {
   
+    goodEnding = true;
+  
+  }
+  
+  else if (mouseX >= 130 && mouseY >= 200 && mouseX <= 280 && mouseY <= 300 
+  && textOn == false && cookingDone == false) {
+  
+    badEnding = true;
+  
+  }
   
   
   //checks if meat on pan is pressed and text is off

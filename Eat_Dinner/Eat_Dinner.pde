@@ -19,6 +19,8 @@ boolean eatDinnerStage = false;
 boolean goodEnding = false;
 boolean badEnding = false;
 
+boolean textOn = true;
+
 
 void setup() {
 
@@ -37,23 +39,44 @@ background(0);
  uncookedMeat.displayRawMeat();
  hands.displayHands();
  topRightPan.displayTopRightPan();
+ 
+ if (textOn == true){
  openingText.displayOpeningText();
+ }
  }
  
  //display frame two (cooking)
+ if (cookingStage == true) {
  
+ 
+ 
+ }
  
  //display frame three (cooked)
+ if (cookingDone == true) {
+ 
+ 
+ }
  
  
  //display frame four (Eat Dinner)
+ if (eatDinnerStage == true) {
  
+ 
+ 
+ }
  
  //display good ending frame
+ if (goodEnding == true) {
  
+ 
+ }
  
  //display bad ending frame
+ if (badEnding == true) {
  
+ 
+ }
  
 }
 
@@ -70,7 +93,20 @@ void displayBadEnding() {
 
 
 void mousePressed() {
+  
+  //removes opening text when mouse is clicked
+  textOn = false;
 
-  if (topRightpan )
+  //checks if topRightPan is pressed and text is off
+  //if (mouseX >= ) {
+  
+  
+  //}
+  
+  //checks if meat on plate is pressed and text is off
+  
+  
+  
+  //checks if meat on pan is pressed and text is off
 
 }

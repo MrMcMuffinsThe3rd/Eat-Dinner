@@ -69,6 +69,9 @@ void displayStove() {
   
   void displayThumbsUp() {
   
+     thumbsUp = loadImage("thumbsUp.png");
+  thumbsUp.resize(400, 400);
+  image(thumbsUp, 0, 0);
   
   }
   

@@ -20,6 +20,9 @@ void displayBadEnd() {
 
 void displayGoodEnd() {
 
+  goodEnd = loadImage("text-2.png");
+  goodEnd.resize(400, 400);
+  image(goodEnd, 0, 0);
 
 }
 

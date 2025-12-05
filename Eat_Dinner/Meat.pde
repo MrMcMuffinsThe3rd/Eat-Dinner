@@ -12,20 +12,20 @@ meatPosition = p;
 
 }
 
-void displayRawMeat(){
+void displayRawMeat(int s){
 
   uncookedMeat = loadImage("rawMeatSprite.png");
-  uncookedMeat.resize(300,300);
+  uncookedMeat.resize(s,s);
   image(uncookedMeat, meatPosition.x, meatPosition.y);
 
 }
 
 
-void displayCookedMeat(){
+void displayCookedMeat(int s){
 
   cookedMeat = loadImage("cookedMeatSprite.png");
-  cookedMeat.resize(400, 400);
-  image(cookedMeat, 0, 0);
+  cookedMeat.resize(s, s);
+  image(cookedMeat, meatPosition.x, meatPosition.y);
   
 }
 

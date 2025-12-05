@@ -77,6 +77,9 @@ void displayStove() {
   
   void displayBloodyHands() {
   
+   bloodyHands = loadImage("bloodyHandsSprite.png");
+  bloodyHands.resize(400, 400);
+  image(bloodyHands, 0, 0);
   
   }
   

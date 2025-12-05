@@ -15,6 +15,9 @@ void displayOpeningText() {
 
 void displayBadEnd() {
 
+  badEnd = loadImage("text-3.png");
+  badEnd.resize(400, 400);
+  image(badEnd, 0, 0);
 
 }
 

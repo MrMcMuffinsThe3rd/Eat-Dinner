@@ -47,13 +47,13 @@ void draw() {
  //tests
  //println(cookingDone);
  //println(cookingStage);
-println(badEnding);
+//println(badEnding);
 
-//println(gameBegining);
+println(gameEnds);
 
  
  //opening instructions
-  if (textOn == true && gameStart== true){
+  if (textOn == true && gameStart == true && gameEnds == false){
    table.displayTable();
  plate.displayPlate();
  uncookedMeat.displayRawMeat(300);
@@ -117,27 +117,18 @@ println(badEnding);
   bloodyHands.displayBloodyHands();
  badEndText.displayBadEnd();
  
+     
+ 
  }
  
 }
 
 
-void displayGoodEnding() {
-
-  background(255);
-
-}
-
-void displayBadEnding() {
-
-  
-}
-
 
 void mousePressed() {
   
   //removes opening text when mouse is clicked, checks if it's false first
-  if(gameStart == true) {
+  if(gameStart == true){
   
     gameStart = false;
     gameBegining = true;
@@ -146,7 +137,7 @@ void mousePressed() {
 
   //checks if topRightPan is pressed and text is off
   else if (mouseX >= 290 && mouseY <= 90 && cookingStage == false 
-  && gameBegining == true) {
+  && gameBegining == true && gameEnds == false) {
   
     cookingStage = true;
   
@@ -156,7 +147,7 @@ void mousePressed() {
   //checks if meat on pan is pressed and text is off
 
   else if (mouseX >= 70 && mouseY >= 130 && mouseX <= 280 && mouseY <= 250 
-  && textOn == false && cookingStage == true && cookingDone == false) {
+  && textOn == false && cookingStage == true && cookingDone == false && gameEnds == false) {
   
     cookingDone = true;
     cookingStage = false;
@@ -165,7 +156,7 @@ void mousePressed() {
   
   //checks if cooked meat on pan is pressed, proceedes to Eat Dinner frame
     else if (mouseX >= 70 && mouseY >= 130 && mouseX <= 280 && mouseY <= 250 
-  && textOn == false && cookingDone == true) {
+  && textOn == false && cookingDone == true && gameEnds == false) {
   
   eatDinnerStage = true;
   cookingDone = false;
@@ -174,38 +165,42 @@ void mousePressed() {
   
     //checks if cooked meat on plate is pressed, proceeds to good ending
     else if (mouseX >= 130 && mouseY >= 200 && mouseX <= 280 && mouseY <= 300 
-  && textOn == false && eatDinnerStage == true) {
+  && textOn == false && eatDinnerStage == true && gameEnds == false) {
     
     goodEnding = true;
-    gameEnds = true;
-    gameBegining = false;
-    eatDinnerStage = false;
+     gameEnds = true;
+  
+  
   
   }
   
     //checks if player eats raw meat (bad ending)
   else if (mouseX >= 130 && mouseY >= 200 && mouseX <= 280 && mouseY <= 300 
-  && textOn == false && cookingStage == false) {
+  && textOn == false && cookingStage == false && gameEnds == false) {
   
     badEnding = true;
-    gameEnds = true;
-     gameBegining = false;
-    eatDinnerStage = false;
-    cookingStage = false;
-    cookingDone = false;  
+     gameEnds = true;
+    
   }
   
-  //restarts the game
-  else if (gameEnds == true) {
+  else if (gameBegining == true) {
   
-    gameBegining = true;
-    gameEnds = false;
+  gameEnds = false;
+  
+      gameStart = true;
+    gameBegining = false;
+    
     goodEnding = false;
     badEnding = false;
-    eatDinnerStage = false;
-    cookingStage = false;
-    cookingDone = false;
+    
+    
+ cookingStage = false;
+ cookingDone = false;
+ eatDinnerStage = false;
+ 
+  textOn = true;
   
   }
+  
   
 }

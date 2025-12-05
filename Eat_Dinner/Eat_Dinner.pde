@@ -1,5 +1,7 @@
-Meat uncookedMeat = new Meat();
-Meat cookedMeat = new Meat();
+
+
+Meat uncookedMeat;
+//Meat cookedMeat = new Meat();
 Props hands = new Props();
 Props table = new Props();
 Props plate = new Props();
@@ -25,7 +27,7 @@ boolean textOn = true;
 void setup() {
 
   size(400, 400);
- 
+ uncookedMeat = new Meat(new PVector(45, 130));
 
 }
 
@@ -47,8 +49,11 @@ background(0);
  
  //display frame two (cooking)
  if (cookingStage == true) {
- 
- 
+ table.displayTable();
+ stove.displayStove();
+ cookingPan.displayCookingPan();
+ uncookedMeat.displayRawMeat();
+ //cookedMeat.displayCookedMeat();
  
  }
  

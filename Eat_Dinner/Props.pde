@@ -44,7 +44,9 @@ void displayPlate() {
 
 void displayStove() {
 
-  
+  stove = loadImage("stoveSprite.png");
+  stove.resize(400, 400);
+  image(stove, 0, 0);
   
 }
 
@@ -59,6 +61,9 @@ void displayStove() {
   
   void displayCookingPan() {
   
+  cookingPan = loadImage("cookingPanSprite.png");
+  cookingPan.resize(400, 400);
+  image(cookingPan, 0, 0);
     
   }
   
